@@ -1,64 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Site</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="assets/font/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.css">
-  <link rel="stylesheet" href="assets/css/header.css">
-  <link rel="stylesheet" href="app.js">
-</head>
-<body>
-  <header>
-    <div class="small" id="header-scroll">
-      <h1><a href="#">
-        <!-- <img src="assets/image/Picture1.png" class="img-fluid" alt="..." height= 60px> -->
-        <img src="assets/image/Picture1.png" height="60px" style="padding: 10px;" alt="...">
-      </a></h1>
-      <nav>
-        <ul>
-          <li><a href="#1">Projects</a></li>
-          <li><a href="#2">Resume</a></li>
-          <li><a href="#3">About</a></li>
-          <li><a href="#4">Skills</a></li>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDH - Smile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/font/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="app.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  </head>
+  <div id="fullscreen">
+    <body>
+      <header>
+        <div class="small" id="header-scroll">
+            <h1 id="LDH">Smile</h1>
+            <nav>
+              <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Résume</a></li>
+                <li><a href="#skills">Skills</a></li>
+              </ul>
+            </nav>
+        </div>
+      </header>
+
+
+      <section id="Information">
+        <div>
+          <h1 id="LDH-bigger">Smile</h1>
+          <div class="text-justify">
+            <p class="reference">Intern AI Developer</p>
+            <p class="reference">Follow the sunshine</p>
+          </div>
+          <div style="margin-top: 30px;"><a class="btn btn-outline-info btn-lg" href="#about" role="button">More about me</a></div>
+        </div>
+      </section>
+
+      
+      <!-- About Me -->
+      <section id="about">
+        <div class="position-relative" style="height: 100%; width:100%">
+          <div style="width: 40%;height:100%; float:left">
+            <img id="myimg" class="rounded-circle" src="assets\image\LDH.jpg" alt="..." style="height:300px">
+            <p class="text-justify m-3">Le Duy Hiep</p>
+          </div>
+          <div style="width: 60%;height:100%; float:right">
+            <h1 id="about-heading">About</h1>
+            <p class="text-justify"> I'm AI Developer</p>
+            <p class="text-justify"> Study at UIT-VNU with Computer Science faculty</p>
+          </div>
+        </div>    
+      </section>
+
+
+      <!-- Projects -->
+      <section id="projects">
+        <div class="section-name"><h1>Projects</h1></div>    
+        <table id="project-tb">
+          <tr>
+            <td style="width: 50%;">
+              <div>
+                <div class="div-class-name"><a class="project-name">project 1</a></div>
+                <img src="assets\image\retrieve information.jpeg" alt="project1" style="width:70%;padding-top:15px;">
+              </div>
+            </td>
+            <td style="width: 50%;">
+              <div  class="div-class-name">
+                <div><a class="project-name">project 2</div>
+              </div>
+              <div><p>face-detection</p></div>
+            </td>
+          </tr>
+          <tr>
+            <td style="width: 50%;">
+              <div  class="div-class-name">
+                <div><a class="project-name">project 3</div>
+              </div>
+              <div></div>
+            </td>
+            <td style="width: 50%;">
+              <div  class="div-class-name">
+                <div><a class="project-name">project 4</div>
+              </div>
+              <div></div>
+            </td>
+          </tr>
+        </table>
+
+
+      </section>
+      
+
+      <!-- Resume -->
+      <section id="resume">
+        <div class="section-name"><h1>Résume</h1></div>
+        <div style="margin-top: 30px;"><a class="btn btn-outline-info btn-lg" role="button">Download Résume</a></div>
+      </section>
+      
+
+      <!-- Skills -->
+      <section id="skills">
+        <div class="section-name"><h1>Skills</h1></div>
+      </section>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+
+    <div id="footer1">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-light">LDH - Smile</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3" style="padding: 3px;"><a class="text-light" href = "https://www.facebook.com/duyhiep.le.54/"><i class="bi bi-facebook"></i></a></li>
+          <li class="ms-3" style="padding: 3px;"><a class="text-light" href = "https://www.instagram.com/smile_229_/"><i class="bi bi-instagram"></i></a></li>
+          <li class="ms-3" style="padding: 3px;"><a class="text-light"  href = "https://github.com/CallmeSmile229/"><i class="bi bi-github"></i></a></li>
         </ul>
-      </nav>
+      </footer>
     </div>
-  </header>
-  <section id="1">
-    <h1>Project</h1>
-  </section>
-  <section id="2">
-    <h1>Resume</h1>
-  </section>
-  <section id="3">
-    <h1>About</h1>
-  </section>
-  <section id="4">
-    <h1>Skills</h1>
-  </section>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
-
-<div class="container">
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <div class="col-md-4 d-flex align-items-center">
-      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-      </a>
-      <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
-    </div>
-
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex"">
-      <li class="ms-3"><a class="text-muted" href = "https://github.com/CallmeSmile229" style="padding: 5px;"></a><i class="fa-brands fa-github"></i></li>
-      <li class="ms-3"><a class="text-muted" href = "https://www.instagram.com/smile_229_/" style="padding: 5px;"></a><i class="fa-brands fa-instagram"></i></li>
-      <li class="ms-3"><a class="text-muted" href = "https://www.facebook.com/duyhiep.le.54/" style="padding: 5px;"><i class="fa-brands fa-facebook"></i></a></li>
-    </ul>
-  </footer>
-  </div>
-
+</div>
 </html>
