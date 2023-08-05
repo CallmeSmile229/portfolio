@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Bitter");
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Licorice&family=Tangerine&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Licorice&family=Montserrat&family=Tangerine&display=swap');
 :root{
   --dark-color: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
 }
@@ -9,7 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: bitter;
+  font-family: 'Montserrat', sans-serif;
 }
 html,
 body {
@@ -30,7 +29,7 @@ a.active {
 #header-scroll {
   position: fixed;
   height: 100%;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   left: 0;
   top: 0;
   float: left;
@@ -60,7 +59,7 @@ a.active {
 #header-scroll.small h1 {
   padding: 10px 0;
   height: auto;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
@@ -68,8 +67,8 @@ a.active {
 body {
   font-family: 'Open Sans', sans-serif;
 }
+
 nav {
-  width: 100%;
   height: auto;
   position: fixed;
   top: 0;
@@ -110,11 +109,13 @@ p{
 
 section {
   width: 100%;
-  height: 700px;
+  height:auto;
+  min-height: 800px;
+  padding-bottom: 100px;
   /* background-color: #000000;
   background-image: --dark-color; */
   background-size: cover;
-  box-sizing: content-box;
+  box-sizing: border-box;
   text-align: center;
   border-bottom: 1px solid #888;
 }
@@ -128,68 +129,6 @@ section:nth-child(odd) {
 .sections section:first-child {
   margin-top: 100px;
 }
-#about{
-  padding: 0;
-  border-top: 2px;
-  border-color: aliceblue;
-}
-
-#about-heading{
-  width: 100%;
-  text-align: center;
-  padding-top: 20px;
-}
-
-#myimg{
-  margin-top: 30%;
-}
-
-#LDH{
-  font-family: 'Licorice', cursive;
-  color: aliceblue;
-  font-size: 2rem;
-  width: 10%;
-}
-
-#LDH-bigger{
-  font-family: 'Licorice', cursive;
-  color: aliceblue;
-  font-size: 7rem;
-}
-
-.reference{
-  color: aliceblue;
-  font-size: 2rem;
-  font-family: 'Dancing Script', cursive;
-}
-
-#logo{
-  height:auto;
-  text-align: center;
-  box-sizing: border-box;
-  width: 10%;
-}
-
-.section-name{
-  height: auto;
-  float: inline-start;
-  padding-top: 100px;
-}
-
-#project-tb{
-  width: 100%;
-  margin-top: 20px;
-}
-
-.project-name{
-  color: aliceblue;
-}
-
-.div-class-name{
-  padding-top: 5px;
-  height: 100%;
-}
-
 #footer1{
   /* background-color: #000000;
   background-image: --dark-color; */
@@ -202,12 +141,121 @@ section:nth-child(odd) {
   background-color: #000000;
   background-image: var(--dark-color);
 }
+/* about */
+#about-box{
+  display: flex;
+  padding: 30px;
+}
+
+#myimg-box{
+  flex:4;
+  padding-top: 10%;
+}
+
+#my-information-box{
+  flex:6;
+}
+
+#myimg{
+  width: 70%;
+}
+
+.introduce-myself{
+  color:aliceblue
+}
+
+#infor{
+  display: flex;
+  flex-direction: column;
+}
+
+#LDH{
+  font-family: 'Licorice', cursive;
+  color: aliceblue;
+  text-align: center;
+  width: 100%;
+}
+/* information */
+#LDH-bigger{
+  font-family: 'Licorice', cursive;
+  color: aliceblue;
+  font-size: 7rem;
+}
+
+.reference{
+  color: aliceblue;
+  font-size: 2rem;
+}
+
+#logo{
+  height:auto;
+  text-align: center;
+  box-sizing: border-box;
+  width: 10%;
+}
+
 
 #Information{
   padding-top: 200px;
   box-sizing:border-box ;
+  height:100vh;
 }
 
 #skills{
   border-bottom: none;
 }
+
+/* projects */
+/* #project{
+  height: auto;
+} */
+
+#project-list{
+  display: flex;
+  flex:1;
+  flex-direction: column;
+}
+
+#project-list-firstline{
+  flex:1;
+  display: flex;
+  flex-direction: row;
+}
+
+#project-list-secondline{
+  flex:1;
+  display: flex;
+  flex-direction: row;
+}
+
+.getproject{
+  color:aliceblue;
+  margin: auto;
+  border: 1px #d6e0eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex:1;
+}
+
+.project-name{
+  color:aqua;
+  font-size: 1.5rem;
+}
+
+.img-project{
+  width: 80%;
+}
+
+.introduce-project{
+  margin:0 10%;
+}
+
+#playmusic{
+  color: aliceblue;
+  align-content: center;
+  box-sizing: content-box;
+  cursor: pointer;
+  flex:1;
+}
+

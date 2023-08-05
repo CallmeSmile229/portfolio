@@ -15,17 +15,22 @@
   <div id="fullscreen">
     <body>
       <header>
-        <div class="small" id="header-scroll">
-            <h1 id="LDH">Smile</h1>
-            <nav>
-              <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Résume</a></li>
-                <li><a href="#skills">Skills</a></li>
-              </ul>
-            </nav>
-        </div>
+        <div class="small" id="header-scroll" style="display:inline-flex;flex-wrap:wrap">
+            <div style="flex:1"><h1 id="LDH">Smile</h1></div>
+            <div style="flex:8;justify-content:center">
+              <nav style="display: inline-block;width:80%">
+                <ul>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#resume">Résume</a></li>
+                  <li><a href="#skills">Skills</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div id="play-music" style="flex: 1;display:flex">
+              <h1 id ="playmusic" style="font-size:1rem">Playmusic</h1>
+            </div>
+          </div>
       </header>
 
 
@@ -33,25 +38,28 @@
         <div>
           <h1 id="LDH-bigger">Smile</h1>
           <div class="text-justify">
-            <p class="reference">Intern AI Developer</p>
+            <!-- <p class="reference">Intern AI Developer</p> -->
             <p class="reference">Follow the sunshine</p>
           </div>
           <div style="margin-top: 30px;"><a class="btn btn-outline-info btn-lg" href="#about" role="button">More about me</a></div>
         </div>
+    
       </section>
 
       
       <!-- About Me -->
       <section id="about">
-        <div class="position-relative" style="height: 100%; width:100%">
-          <div style="width: 40%;height:100%; float:left">
-            <img id="myimg" class="rounded-circle" src="assets\image\LDH.jpg" alt="..." style="height:300px">
+        <div id="about-box">
+          <div id = "myimg-box">
+            <img id="myimg" class="rounded-circle" src="assets\image\LDH.jpg" alt="...">
             <p class="text-justify m-3">Le Duy Hiep</p>
           </div>
-          <div style="width: 60%;height:100%; float:right">
+          <div id="my-information-box">
             <h1 id="about-heading">About</h1>
-            <p class="text-justify"> I'm AI Developer</p>
-            <p class="text-justify"> Study at UIT-VNU with Computer Science faculty</p>
+            <div id="infor">
+              <a class="introduce-myself"> I'm Intern AI Developer</a>
+              <a class="introduce-myself"> Study at UIT-VNU with Computer Science faculty</a>
+            </div>
           </div>
         </div>    
       </section>
@@ -60,38 +68,36 @@
       <!-- Projects -->
       <section id="projects">
         <div class="section-name"><h1>Projects</h1></div>    
-        <table id="project-tb">
-          <tr>
-            <td style="width: 50%;">
-              <div>
-                <div class="div-class-name"><a class="project-name">project 1</a></div>
-                <img src="assets\image\retrieve information.jpeg" alt="project1" style="width:70%;padding-top:15px;">
+          <div id="project-list">
+            <div id="project-list-firstline">
+              <div class="getproject">
+                <a class="project-name">Retrieve Information</a>
+                <div><img class="img-project" src="assets\image\retrieve information.jpeg", alt="Retrieve Information"></div>
+                <div>
+                  <p class="introduce-project"> This project was training with 712 images about UIT student card and export 4 class information inclue name, year, faculty and ID</p>
+                </div>
               </div>
-            </td>
-            <td style="width: 50%;">
-              <div  class="div-class-name">
-                <div><a class="project-name">project 2</div>
+              <div class="getproject">
+                <a class="project-name">Face Recognization</a>
+                <div><img class="img-project" src="assets\image\face-recog.png", alt="Retrieve Information"></div>
+                <div>
+                  <p class="introduce-project"> INPUT: Video realtime OUTPUT: Recordnization have people in video or no and who is them</p>
+                </div>
               </div>
-              <div><p>face-detection</p></div>
-            </td>
-          </tr>
-          <tr>
-            <td style="width: 50%;">
-              <div  class="div-class-name">
-                <div><a class="project-name">project 3</div>
+            </div>
+            <div id="project-list-secondline">
+              <div class="getproject">
+                <div><a class="project-name">Filter</a></div>
+                <div><img class="img-project" src="assets\image\filter.png" alt="Filter"></div>
+                <div><a> This project will add 1 filter in yourface.</a></div>
               </div>
-              <div></div>
-            </td>
-            <td style="width: 50%;">
-              <div  class="div-class-name">
-                <div><a class="project-name">project 4</div>
+              <div class="getproject">
+                <div><a class="project-name"> project4</a></div>
+                <div><a class="img-project"> img</a></div>
+                <div><a class="introduce-project"> introduce</a></div>
               </div>
-              <div></div>
-            </td>
-          </tr>
-        </table>
-
-
+            </div>
+          </div>
       </section>
       
 
@@ -104,7 +110,7 @@
 
       <!-- Skills -->
       <section id="skills">
-        <div class="section-name"><h1>Skills</h1></div>
+      <div class="section-name"><h1>Skills</h1></div>
       </section>
 
 
@@ -124,4 +130,7 @@
       </footer>
     </div>
 </div>
+<audio autoplay id="song"> 
+  <source src="assets\TRÊN CHUYẾN XE  Phạm Nguyên Ngọc Ft DICK MV.mp3" type="audio/mpeg"> 
+</audio>  
 </html>
