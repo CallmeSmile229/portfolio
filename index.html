@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LDH - Smile</title>
+    <link rel="icon" href="assets\image\logo.png" type="image">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
@@ -27,9 +28,26 @@
                 </ul>
               </nav>
             </div>
-            <div id="play-music" style="flex: 1;display:flex">
+            <div id="play-music" onclick="playmusic()" style="flex: 1;display:flex" type="button">
               <h1 id ="playmusic" style="font-size:1rem">Playmusic</h1>
             </div>
+            <audio id="song" autoplay loop> 
+              <source src="assets\TRÊN CHUYẾN XE  Phạm Nguyên Ngọc Ft DICK MV.mp3" type="audio/mpeg"> 
+            </audio>
+            <script>
+              var song = document.getElementById("song");
+              isPlay=false;
+              song.pause()
+              function playmusic(){
+                  if (!isPlay){
+                      song.play();
+                      isPlay= !isPlay
+                  }else{
+                      song.pause();
+                      isPlay= !isPlay
+                  }
+              }
+            </script>
           </div>
       </header>
 
@@ -52,10 +70,10 @@
         <div id="about-box">
           <div id = "myimg-box">
             <img id="myimg" class="rounded-circle" src="assets\image\LDH.jpg" alt="...">
-            <p class="text-justify m-3">Le Duy Hiep</p>
+            <p class="text-justify m-3" id="myname">Le Duy Hiep</p>
           </div>
           <div id="my-information-box">
-            <h1 id="about-heading">About</h1>
+            <h1 id="about-heading" class="section-name">About</h1>
             <div id="infor">
               <a class="introduce-myself"> I'm Intern AI Developer</a>
               <a class="introduce-myself"> Study at UIT-VNU with Computer Science faculty</a>
@@ -69,34 +87,34 @@
       <section id="projects">
         <div class="section-name"><h1>Projects</h1></div>    
           <div id="project-list">
-            <div id="project-list-firstline">
               <div class="getproject">
-                <a class="project-name">Retrieve Information</a>
-                <div><img class="img-project" src="assets\image\retrieve information.jpeg", alt="Retrieve Information"></div>
-                <div>
-                  <p class="introduce-project"> This project was training with 712 images about UIT student card and export 4 class information inclue name, year, faculty and ID</p>
+                <div class="project-name"><a>Retrieve Information</a></div>
+                <div class="img-project-box"><img class="img-project" src="assets\image\project.png", alt="Retrieve Information"></div>
+                <div class="introduce-project">
+                  <p> This project was training with 712 images about UIT student card and export 4 class information inclue name, year, faculty and ID</p>
                 </div>
               </div>
               <div class="getproject">
-                <a class="project-name">Face Recognization</a>
-                <div><img class="img-project" src="assets\image\face-recog.png", alt="Retrieve Information"></div>
-                <div>
-                  <p class="introduce-project"> INPUT: Video realtime OUTPUT: Recordnization have people in video or no and who is them</p>
+                <div class="project-name"><a>Face Recognization</a></div>
+                <div class="img-project-box"><img class="img-project" src="assets\image\mookup-face-recog.png", alt="Retrieve Information"></div>
+                <div class="introduce-project">
+                  <p> INPUT: Video realtime </p>
+                  <p> OUTPUT: Recordnization have people in video or no and who is them</p>
                 </div>
               </div>
-            </div>
-            <div id="project-list-secondline">
+            <!-- </div> -->
+            <!-- <div id="project-list-secondline"> -->
               <div class="getproject">
-                <div><a class="project-name">Filter</a></div>
-                <div><img class="img-project" src="assets\image\filter.png" alt="Filter"></div>
-                <div><a> This project will add 1 filter in yourface.</a></div>
+                <div class="project-name"><a class="project-name">Filter</a></div>
+                <div class="img-project-box"><img class="img-project" src="assets\image\mookup-filter.png" alt="Filter"></div>
+                <div class="introduce-project"><a> This project will add 1 filter in yourface.</a></div>
               </div>
               <div class="getproject">
-                <div><a class="project-name"> project4</a></div>
-                <div><a class="img-project"> img</a></div>
-                <div><a class="introduce-project"> introduce</a></div>
+                <div class="project-name"><a> project4</a></div>
+                <div class="img-project-box"><img class="img-project" src="assets\image\mookup-project.png" alt="..."> </div>
+                <div class="introduce-project"><a> introduce</a></div>
               </div>
-            </div>
+            <!-- </div> -->
           </div>
       </section>
       
@@ -104,7 +122,7 @@
       <!-- Resume -->
       <section id="resume">
         <div class="section-name"><h1>Résume</h1></div>
-        <div style="margin-top: 30px;"><a class="btn btn-outline-info btn-lg" role="button">Download Résume</a></div>
+        <div style="margin-top: 30px;"><a class="btn btn-outline-info btn-lg" role="button" href="assets\image\CV_LeDuyHiep.pdf">Download Résume</a></div>
       </section>
       
 
@@ -130,7 +148,5 @@
       </footer>
     </div>
 </div>
-<audio autoplay id="song"> 
-  <source src="assets\TRÊN CHUYẾN XE  Phạm Nguyên Ngọc Ft DICK MV.mp3" type="audio/mpeg"> 
-</audio>  
+  
 </html>

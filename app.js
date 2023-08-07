@@ -31,13 +31,3 @@ sections.each(function () {
     }
 });
 });
-
-var song = document.getElementById("song");
-var playmusic= document.getElementById("playmusic");
-playmusic.onclick = function(){
-    if (song.pause()){
-        song.play();
-    }else{
-        song.pause();
-    }
-}
